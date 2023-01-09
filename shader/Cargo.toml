@@ -13,4 +13,4 @@ spirv-std = { workspace = true }
 # Enabling this dependency causes the build to fail!
 # But this is only a build-dependency for the non-existant build script, so it should not affect the build in any way.
 # But for some reason this changes the features num-traits is being build with from "libm" to default, causing that crate to fail.
-#spirv-builder = { workspace = true }
+spirv-builder = { workspace = true }
