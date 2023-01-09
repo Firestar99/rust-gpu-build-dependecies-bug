@@ -5,9 +5,9 @@ members = [
 ]
 
 # Using github master doesn't change anything in it's behaviour
-#[patch.crates-io]
-#spirv-std = { git = 'https://github.com/EmbarkStudios/rust-gpu.git' }
-#spirv-builder = { git = 'https://github.com/EmbarkStudios/rust-gpu.git' }
+[patch.crates-io]
+spirv-std = { git = 'https://github.com/EmbarkStudios/rust-gpu.git' }
+spirv-builder = { git = 'https://github.com/EmbarkStudios/rust-gpu.git' }
 
 [workspace.dependencies]
 spirv-std = { version = "0.4.0", features = ["glam"] }
