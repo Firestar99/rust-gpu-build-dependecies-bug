@@ -93,6 +93,7 @@ dependencies = [
 name = "engine"
 version = "0.1.0"
 dependencies = [
+ "spirv-builder",
  "spirv-std",
 ]
 
@@ -401,7 +402,7 @@ dependencies = [
 name = "shader"
 version = "0.1.0"
 dependencies = [
- "spirv-builder",
+ "engine",
 ]
 
 [[package]]

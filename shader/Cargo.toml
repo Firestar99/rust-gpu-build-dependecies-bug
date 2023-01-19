@@ -3,5 +3,8 @@ name = "shader"
 version = "0.1.0"
 edition = "2021"
 
-[build-dependencies]
-spirv-builder = { workspace = true }
+#[dependencies]
+#engine = { path = "../engine" }
+
+[target.'cfg(target_arch = "spirv")'.dependencies]
+engine = { path = "../engine" }

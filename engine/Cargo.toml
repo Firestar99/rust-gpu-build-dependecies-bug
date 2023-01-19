@@ -9,5 +9,8 @@ crate-type = ["lib", "dylib"]
 [dependencies]
 spirv-std = { workspace = true }
 
-# Enabling this dependency causes the build to fail!
+#[target.'cfg(not(target_arch = "spirv"))'.dependencies]
 #shader = { path = "../shader" }
+
+[build-dependencies]
+spirv-builder = { workspace = true }
