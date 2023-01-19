@@ -3,5 +3,11 @@ name = "engine"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+crate-type = ["lib", "dylib"]
+
 [dependencies]
-spirv-builder = { workspace = true }
+spirv-std = { workspace = true }
+
+# Enabling this dependency causes the build to fail!
+#shader = { path = "../shader" }
