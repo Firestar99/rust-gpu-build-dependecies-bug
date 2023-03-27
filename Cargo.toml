@@ -10,5 +10,5 @@ members = [
 #spirv-builder = { git = 'https://github.com/EmbarkStudios/rust-gpu.git' }
 
 [workspace.dependencies]
-spirv-std = { version = "0.4.0", features = ["glam"] }
-spirv-builder = { version = "0.4.0", default-features = false, features = ["use-installed-tools"] }
+spirv-std = { version = "0.6" }
+spirv-builder = { version = "0.6", default-features = false, features = ["use-installed-tools"] }
