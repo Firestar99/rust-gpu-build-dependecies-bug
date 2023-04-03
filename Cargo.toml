@@ -4,6 +4,9 @@ members = [
     "shader"
 ]
 
+[workspace.package]
+edition = "2021"
+
 # Using github master doesn't change anything in it's behaviour
 #[patch.crates-io]
 #spirv-std = { git = 'https://github.com/EmbarkStudios/rust-gpu.git' }
