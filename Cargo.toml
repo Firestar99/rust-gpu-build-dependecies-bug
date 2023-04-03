@@ -1,7 +1,9 @@
 [workspace]
 members = [
     "engine",
-    "shader"
+    "shader",
+    "engine-shader-derive",
+    "other-shader"
 ]
 
 # Using github master doesn't change anything in it's behaviour
@@ -12,3 +14,8 @@ members = [
 [workspace.dependencies]
 spirv-std = { version = "0.6" }
 spirv-builder = { version = "0.6", default-features = false, features = ["use-installed-tools"] }
+
+engine-shader-derive = { path = "./engine-shader-derive" }
+shader = { path = "./shader" }
+engine = { path = "./engine" }
+other-shader = { path = "./other-shader" }

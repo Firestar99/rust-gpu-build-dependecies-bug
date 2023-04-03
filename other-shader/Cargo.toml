@@ -1,5 +1,5 @@
 [package]
-name = "shader"
+name = "other-shader"
 version = "0.1.0"
 edition = "2021"
 
@@ -9,7 +9,6 @@ crate-type = ["rlib", "dylib"]
 [dependencies]
 spirv-std = { workspace = true }
 engine-shader-derive = { workspace = true }
-other-shader = { workspace = true }
 
 [build-dependencies]
 # Enabling this dependency causes the build to fail!

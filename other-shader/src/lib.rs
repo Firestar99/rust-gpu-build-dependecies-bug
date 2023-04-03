@@ -15,17 +15,17 @@ pub fn convert(x: i32) -> i32 {
 	x * 2 - 1
 }
 
-// pub mod bla {
+// pub mod other_bla {
 // 	use super::*;
 //
 // 	#[shader(fragment)]
-// 	pub fn main_fs(output: &mut Vec4) {
+// 	pub fn other_fs(output: &mut Vec4) {
 // 		*output = vec4(1.0, 0.0, 0.0, 1.0);
 // 	}
 // }
 
 #[shader(vertex)]
-pub fn main_vs(
+pub fn other_vs(
 	#[spirv(vertex_index)] vert_id: i32,
 	#[spirv(position, invariant)] out_pos: &mut Vec4,
 ) {
@@ -37,4 +37,11 @@ pub fn main_vs(
 	);
 }
 
-pub use other_shader as my_other;
+/// name conflict!
+#[shader(vertex)]
+pub fn main_vs(
+	#[spirv(vertex_index)] vert_id: i32,
+	#[spirv(position, invariant)] out_pos: &mut Vec4,
+) {
+	*out_pos = vec4(vert_id as f32 / 255., 0., 0., 0.);
+}

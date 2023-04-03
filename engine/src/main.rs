@@ -2,6 +2,7 @@ use std::error::Error;
 use std::path::PathBuf;
 
 use spirv_builder::{MetadataPrintout, SpirvBuilder};
+use shader::convert;
 
 fn main() -> Result<(), Box<dyn Error>> {
 	let manifest_dir = env!("CARGO_MANIFEST_DIR");
@@ -16,5 +17,10 @@ fn main() -> Result<(), Box<dyn Error>> {
 	let module_path = result.module.unwrap_single();
 	println!("module_path: {}", module_path.to_str().unwrap());
 	println!("entry points: {:?}", result.entry_points);
+
+	println!("Calling func");
+	let input = 4;
+	println!("convert({}) = {}", input, convert(input));
+
 	Ok(())
 }

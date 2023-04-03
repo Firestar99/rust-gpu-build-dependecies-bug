@@ -6,6 +6,8 @@
       <sourceFolder url="file://$MODULE_DIR$/engine/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/shader/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/engine-shader-derive/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/other-shader/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/engine/target" />
       <excludeFolder url="file://$MODULE_DIR$/shader/target" />
